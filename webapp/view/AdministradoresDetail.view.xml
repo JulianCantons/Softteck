@@ -1,0 +1,63 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt" height="100%">
+
+    <Page id="as">
+<Table id="areasTable" selectionChange="onSelectionChange" mode="SingleSelectMaster" items="{ToAreaSet}" >
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <Title id="_IDGenTitle1" text="Administradores" level="H2"/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                        <OverflowToolbarButton id="_IDGenOverflowToolbarButton1" icon="sap-icon://add" press="onCreateAdministrador"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="col1">
+                        <Text id="text1" text="ID administrador" />
+                    </Column>
+                    <Column id="col2">
+                        <Text id="text2" text="ID Area" />
+                    </Column>
+                    <Column id="col3">
+                        <Text id="text3" text="Nombre Area" />
+                    </Column>
+                    <Column id="col4">
+                        <Text id="text4" text="Presupuesto" />
+                    </Column>
+                    <Column id="col5">
+                        <Text id="text5" text="Cantidad empleados" />
+                    </Column>
+                    <Column id="col6">
+                        <Text id="text6" text="Activa" />
+                    </Column>
+                    <Column id="col7">
+                        <Text id="text7" text="Descripcion proyecto" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="collistitem">
+                        <cells>
+                            <Text id="_IDGenText1" text="{IdAdmin}"/>
+                            <Text id="_IDGenText2" text="{IdArea}"/>
+                            <Text id="_IDGenText3" text="{Nombre}"/>
+                            <Text id="_IDGenText5" text="{Presupuesto}"/>
+                            <Text id="_IDGenText6" text="{CantidadEmpleados}"/>
+                            <Text id="_IDGenText7" text="{Activa}"/>
+                            <Text id="_IDGenText8" text="{DescripcionProyectos}"/>
+                            <HBox id="_IDGenHBox1">
+                                <!--<Button id="_IDGenButton1" icon="sap-icon://display" press="onMostrarAreas"/>
+                                <Button id="_IDGenButton2" icon="sap-icon://edit" press="onModificarAdmin" type="Accept"/>
+                                <Button id="_IDGenButton3" icon="sap-icon://delete" press="onEliminarAdmin" type="Reject"/>-->
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+    </Page>
+
+
+  </mvc:View>  

@@ -1,0 +1,221 @@
+{
+    "_version": "1.17.0",
+    "sap.app": {
+        "id": "com.softteck.proyectoempresa",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.13.3",
+            "toolsId": "d4aef68d-7ea2-4792-9d27-3125160ddd16"
+        },
+        "dataSources": {
+            "ZACA1Q2024_ADMIN_RRHH_JC_SRV_02": {
+                "uri": "/sap/opu/odata/sap/ZACA1Q2024_ADMIN_RRHH_JC_SRV_02",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/ZACA1Q2024_ADMIN_RRHH_JC_SRV_02/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "ProyectoEmpresa-display": {
+                    "semanticObject": "ProyectoEmpresa",
+                    "action": "display",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    }
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.71.67",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.softteck.proyectoempresa.i18n.i18n"
+                }
+            },
+            "academiaJSONModel": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
+            "": {
+                "dataSource": "ZACA1Q2024_ADMIN_RRHH_JC_SRV_02",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                },
+                {
+                    "uri": "css/fondo.css"
+                },
+                {
+                    "uri": "css/header.css"
+                },
+                {
+                    "uri": "css/inicio.css"
+                },
+                {
+                    "uri": "css/fondo-admin.css"
+                }
+            ],
+            "resourceRootPaths": [
+                "images"
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.softteck.proyectoempresa.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteMain",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetMain"
+                    ]
+                },
+                {
+                    "pattern": "Administradores",
+                    "name": "Administradores",
+                    "target": [
+                        "TargetAdministradores"
+                    ]
+                },
+                {
+                    "name": "Areas",
+                    "pattern": "Areas",
+                    "target": [
+                        "TargetAreas"
+                    ]
+                },
+                {
+                    "name": "Informacion",
+                    "pattern": "Informacion",
+                    "target": [
+                        "TargetInformacion"
+                    ]
+                },
+                {
+                    "name": "AdministradoresDetail",
+                    "pattern": "Administradores/{IdAdmin}",
+                    "target": [
+                        "TargetAdministradoresDetail"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetMain": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Main",
+                    "viewName": "Main"
+                },
+                "TargetAdministradores": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "AdministradoresId",
+                    "viewName": "Administradores",
+                    "viewLevel": 1
+                },
+                "TargetAreas": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "AreasId",
+                    "viewName": "Areas"
+                },
+                "TargetInformacion": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "InformacionId",
+                    "viewName": "Informacion"
+                },
+                "TargetAdministradoresDetail": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "AdministradoresDetailId",
+                    "viewName": "AdministradoresDetail"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.softteck.proyectoempresa.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "comsoftteckproyectoempresa"
+    }
+}

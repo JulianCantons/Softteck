@@ -1,0 +1,112 @@
+<!-- <core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+
+ -->
+<mvc:View
+	controllerName="sap.ui.layout.sample.SimpleFormToolbar.Page"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Address"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer1" />
+					<Button id="_IDGenButton1" icon="sap-icon://settings"/>
+					<Button id="_IDGenButton2" icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Toolbar id="_IDGenToolbar1" ariaLabelledBy="Title2">
+					<Title id="Title2" text="Office"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer2" />
+					<Button id="_IDGenButton3" icon="sap-icon://settings"/>
+				</Toolbar>
+				<Label id="_IDGenLabel1" text="Name" />
+				<Input id="_IDGenInput1" value="{SupplierName}" />
+				<Label id="_IDGenLabel2" text="Street/No." />
+				<Input id="_IDGenInput2" value="{Street}">
+				</Input>
+				<Input id="_IDGenInput3" value="{HouseNumber}">
+					<layoutData>
+						<l:GridData id="_IDGenGridData1" span="XL2 L1 M3 S4" />
+					</layoutData>
+				</Input>
+				<Label id="_IDGenLabel3" text="ZIP Code/City" />
+				<Input id="_IDGenInput4" value="{ZIPCode}">
+					<layoutData>
+						<l:GridData id="_IDGenGridData2" span="XL2 L1 M3 S4" />
+					</layoutData>
+				</Input>
+				<Input id="_IDGenInput5" value="{City}" />
+				<Label id="_IDGenLabel4" text="Country" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item id="_IDGenItem1" text="England" key="England"/>
+						<core:Item id="_IDGenItem2" text="Germany" key="Germany"/>
+						<core:Item id="_IDGenItem3" text="USA" key="USA"/>
+					</items>
+				</Select>
+				<Toolbar id="_IDGenToolbar2" ariaLabelledBy="Title3">
+					<Title id="Title3" text="Online"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer3" />
+					<Button id="_IDGenButton4" icon="sap-icon://settings"/>
+				</Toolbar>
+				<Label id="_IDGenLabel5" text="Web" />
+				<Input id="_IDGenInput6" value="{Url}" type="Url" />
+				<Label id="_IDGenLabel6" text="Twitter" />
+				<Input id="_IDGenInput7" value="{Twitter}" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</mvc:View>
+
+
+
+
+
+
+<!--
+<Dialog id="area-form" title="Crear Area">
+        <content>
+            <form:SimpleForm id="SimpleFormDisplay480" editable="false" layout="ResponsiveGridLayout" title="Nuevo equipo" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+                <form:content>
+                    <Label id="lbl1" text="Nombre del equipo" />
+                    <Input id="input1" value="{EquipoCreate>/Nombre}" valueLiveUpdate="true" />
+                    <Label id="lbl2" text="Puntuación" />
+                    <Input id="input2" value="{EquipoCreate>/Puntuacion}" valueLiveUpdate="true"/>
+                </form:content>
+                <form:layoutData>
+                    <FlexItemData id="_IDGenFlexItemData1" shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+                </form:layoutData>
+            </form:SimpleForm>
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton1" type="Success" text="Crear" press="onCrearEquipoPress" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton2" type="Neutral" text="Cancelar" press="onCerrarCrearEquipoPress" />
+        </endButton>
+    </Dialog>
+
+-->

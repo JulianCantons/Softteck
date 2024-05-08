@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <VBox id="_IDGenVBox1" justifyContent="Center" alignItems="Center" height="100%">
+        <Title id="_IDGenTitle1" text="Bienvenido" />
+        <Text id="_IDGenText1" text="¡Bienvenido a nuestra aplicación en construcción! Disculpe los inconvenientes mientras trabajamos en ella." />
+    </VBox>
+</mvc:View>

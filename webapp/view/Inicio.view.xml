@@ -1,0 +1,17 @@
+<mvc:View controllerName="com.softteck.proyectoempresa.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" height="100%">
+
+    <Text id="text" class="texto-inicio"  text="
+
+¡Bienvenidos!
+
+Somos líderes globales en soluciones innovadoras y servicios de alta calidad.
+Con una red de expertos administradores y áreas especializadas, abordamos
+desafíos complejos con excelencia y pasión. Desde finanzas hasta marketing,
+nuestra colaboración garantiza resultados excepcionales. Descubre cómo podemos
+trabajar juntos para alcanzar tus metas.
+
+"/>
+
+</mvc:View>
